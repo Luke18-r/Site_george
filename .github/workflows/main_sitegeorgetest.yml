@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'Sitegeorgetest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_757167371E824CFB9FE2DA191F6684F3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F0D5B9549EB24118B6B5B1AAF6508517 }}
           package: .
