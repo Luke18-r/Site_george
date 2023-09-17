@@ -1,0 +1,22 @@
+{
+  "name": "site_george",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luke18-r/Site_george.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luke18-r/Site_george/issues"
+  },
+  "homepage": "https://github.com/Luke18-r/Site_george#readme",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
