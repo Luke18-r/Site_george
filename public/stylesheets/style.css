@@ -44,7 +44,7 @@ ul{
   position: fixed;
   top:0;
   left:0;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 2px solid rgba(255,255,255,0.2);
   background-color: #fdfdfd;
   height: 9.2rem;
   width:100%;
@@ -293,7 +293,7 @@ ul{
   display: none;
 /*    nu se afiseaza pe ecrane mari*/
 }
-@media only screen and (max-width:900px){
+@media (max-width:767px){
 /*    HEADER*/
   
   .hamburger-menu{
