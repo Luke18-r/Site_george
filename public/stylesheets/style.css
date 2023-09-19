@@ -293,7 +293,7 @@ ul{
   display: none;
 /*    nu se afiseaza pe ecrane mari*/
 }
-@media (max-width:767px){
+@media (max-width:900px){
 /*    HEADER*/
   
   .hamburger-menu{
