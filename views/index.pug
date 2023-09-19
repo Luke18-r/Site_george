@@ -4,32 +4,114 @@ block content
   //- h1= title
   //- p Welcome to #{title}
     doctype html
-  head
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    link(rel='stylesheet' href='styles.css')
-    .topnav
-      a.active(href='#home') Home
-      a(href='#news') Categorii
-      a(href='#contact') Asigurari
-      a(href='#about') About
-    // First section
-    div(style="background-image: url('images/Banner.jpg');   background-size: cover; height:200px; padding-top:0px;")
-  h1 Vizionare catalogului de produse
+  //- head
+  //-   meta(name='viewport' content='width=device-width, initial-scale=1')
+  //-   link(rel='stylesheet' href='styles.css')
+  //-   .topnav
+  //-     a.active(href='#home') Home
+  //-     a(href='#news') Categorii
+  //-     a(href='#contact') Asigurari
+  //-     a(href='#about') About
+  //-   // First section
+  //-   div(style="background-image: url('images/Banner.jpg');   background-size: cover; height:200px; padding-top:0px;")
+  //- h1 Vizionare catalogului de produse
+  //- main
+  //-   section.product
+  //-     img(src='/images/pug1.jpg' alt='Product 1')
+  //-     h2 Pug T-Shirt
+  //-     button Add to Cart
+  //-   section.product
+  //-     img(src='/images/pug2.jpg' alt='Product 2')
+  //-     h2 Pug Mug
+  //-     button Add to Cart
+  //-   section.product
+  //-     img(src='/images/pug3.jpg' alt='Product 3')
+  //-     h2 Pug Plush Toy
+  //-     button Add to Cart
+  //- footer
+  //-   p &copy; 2023 Made with love by Luke
+
+  header.header
+    .container-fluid
+      h1.header-brand
+        a(href='') George Draghici
+      ul.nav-list
+        li.nav-item
+          a.nav-link.active(href='#') Home
+        li.nav-item
+          a.nav-link(href='#') About us
+        li.nav-item
+          a.nav-link(href='#') Products & Services
+        li.nav-item
+          a.nav-link(href='contact') Contact
+      ul.social-media
+        li
+          a.social-media-link(href='#')
+            // https://fontawesome.com/icons/facebook-f?style=brands
+            i.fab.fa-facebook-f
+        li
+          a.social-media-link(href='#')
+            i.fab.fa-instagram
+        li
+          a.social-media-link(href='#')
+            i.fab.fa-twitter-square
+        li
+          a.social-media-link(href='#')
+            i.fab.fa-youtube
+      // RESTPOSIVE
+      .hamburger-menu
+        i.fas.fa-bars
+        i.fas.fa-times
+      // END  RESTPOSIVE
   main
-    section.product
-      img(src='/images/pug1.jpg' alt='Product 1')
-      h2 Pug T-Shirt
-      button Add to Cart
-    section.product
-      img(src='/images/pug2.jpg' alt='Product 2')
-      h2 Pug Mug
-      button Add to Cart
-    section.product
-      img(src='/images/pug3.jpg' alt='Product 3')
-      h2 Pug Plush Toy
-      button Add to Cart
-  footer
-    p &copy; 2023 Made with love by Luke
+    section.hero
+      .container-fluid
+        .hero-category.hero-category-1
+          h2 Product A
+          a(href='#') More info
+        .hero-category.hero-category-2
+          h2 Product B
+          a(href='#') More info
+        .hero-category.hero-category-3
+          h2 Product C
+          a(href='#') More info
+        .hero-category.hero-category-4
+          h2 Product D
+          a(href='#') More info
+        .hero-category.hero-category-5
+          h2 Product E
+          a(href='#') More info
+        .hero-category.hero-category-6
+          h2 Product F
+          a(href='#') More info
+        .hero-category.hero-category-7
+          h2 Product G
+          a(href='#') More info
+        .hero-category.hero-category-8
+          h2 Product H
+          a(href='#') More info
+        .hero-category.hero-category-9
+          h2 Product I
+          a(href='#') More info
+  footer.footer
+    p
+      | Copyright &copy; 2020 All rights reserved | Made with 
+      i.fas.fa-heart
+      |  by Madalina Pana
+  // RESTPOSIVE
+  script.
+    let header=document.querySelector(".header");
+    let hamburgerMenu=document.querySelector(".hamburger-menu");
+    let navLinks=document.querySelectorAll(".nav-link");
+    hamburgerMenu.addEventListener("click",function(){
+    header.classList.toggle("menu-open"); /*se adauga-se scoate*/
+    })
+    navLinks.forEach(navLinks=>{
+    navLinks.addEventListener("click",()=>{
+    header.classList.toggle("menu-open");
+    })
+    })
+  // END RESTPOSIVE
 
 
 

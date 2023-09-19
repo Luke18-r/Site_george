@@ -1,0 +1,83 @@
+extends layout
+block content
+    header.header
+      .container-fluid
+        h1.header-brand
+          a(href='home') George Draghici
+        ul.nav-list
+          li.nav-item
+            a.nav-link(href='home') Home
+          li.nav-item
+            a.nav-link(href='#') About us
+          li.nav-item
+            a.nav-link(href='#') Products & Services
+          li.nav-item
+            a.nav-link.active(href='contact') Contact
+        ul.social-media
+          li
+            a.social-media-link(href='#')
+              // https://fontawesome.com/icons/facebook-f?style=brands
+              i.fab.fa-facebook-f
+          li
+            a.social-media-link(href='#')
+              i.fab.fa-instagram
+          li
+            a.social-media-link(href='#')
+              i.fab.fa-twitter-square
+          li
+            a.social-media-link(href='#')
+              i.fab.fa-youtube
+        // RESTPOSIVE
+        .hamburger-menu
+          i.fas.fa-bars
+          i.fas.fa-times
+    main.contact-main
+      .container
+        h1 Contact
+        .contact-form
+          form.form
+            .form-group
+              div
+                label(for='firstName') First Name
+                input#firstName(type='text', name='firstName')
+              div
+                label(for='lastName') Last Name
+                input#lastName(type='text', name='lastName')
+            .form-control
+              label(for='email') Email
+              input#email(type='text', name='email')
+            .form-control
+              label(for='email') Subject
+              input#subject(type='text', name='subject')
+            .form-control
+              label(for='message') Message
+              textarea#message(type='text', name='message', rows='10')
+            .form-control
+              input(type='submit', value='Send Message')
+          .contact
+            .adress
+              h2 Address
+              p 203 Fake St Lalelelor, Los Angeles, USA
+            .phone
+              h2 Phone
+              p.green-paragraf +0728992728
+            .email
+              h2 Email
+              p.green-paragraf email@gmail.com
+    footer.footer
+      p
+        | Copyright &copy; 2020 All rights reserved | Made with 
+        i.fas.fa-heart
+        |  by Madalina Pana
+    script.
+      let header=document.querySelector(".header");
+      let hamburgerMenu=document.querySelector(".hamburger-menu");
+      let navLinks=document.querySelectorAll(".nav-link");
+      hamburgerMenu.addEventListener("click",function(){
+      header.classList.toggle("menu-open"); /*se adauga-se scoate*/
+      })
+      navLinks.forEach(navLinks=>{
+      navLinks.addEventListener("click",()=>{
+      header.classList.toggle("menu-open");
+      })
+      })
