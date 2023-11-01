@@ -22,6 +22,7 @@ body{
 
 a{
   text-decoration: none;
+  text-align: sub;
 }
 
 ul{
@@ -150,7 +151,7 @@ ul{
   
 }
 .hero-category{
-  filter:grayscale(100%);
+  /* filter:grayscale(100%); */
   transition: filter 0.3 linear;
   
   display: flex;
@@ -158,9 +159,9 @@ ul{
   justify-content: center;
   align-items: center;
 }
-.hero-category:hover{
+/* .hero-category:hover{
   filter: grayscale(0%);
-}
+} */
 
 .hero-category h2{
   color: white;
