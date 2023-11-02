@@ -20,10 +20,55 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+//MONGO
+const mongoose = require('mongoose')
+const username="lucian"
+const password="kozgsU2BpfQ3iNjI"
+
+
+
+///Insert data
+const MongoClient = require('mongodb').MongoClient;
+
+const url = `mongodb+srv://${username}:${password}@gettingstarted.d4yhb8b.mongodb.net/?retryWrites=true&w=majority`; // Connection URL
+const dbName = 'Testluci'; // Database name
+
+async function insertData() {
+  const client = new MongoClient(url);
+
+  try {
+    await client.connect();
+    console.log('Connected to MongoDB');
+
+    const db = client.db(dbName);
+    const collection = db.collection('users'); // Replace 'users' with your collection name
+
+    const dataToInsert = {
+      title: 'Mada Lucii',
+      content: 'johndoe@example.com',
+      luci: 'sarmale',
+    };
+
+    const result = await collection.insertOne(dataToInsert);
+    console.log('Data inserted successfully:', result);
+  } catch (err) {
+    console.error('Error:', err);
+  } finally {
+    client.close();
+    console.log('Disconnected from MongoDB');
+  }
+}
+app.get('/try',(req,res)=>{
+
+  insertData();
+})
+
 //app.use('/', indexRouter);
 app.get('/', function (req, res) {
   res.redirect('/home');
 });
+
 app.use('/users', usersRouter);
 app.use('/contact',contactRouter);
 app.use('/home',indexRouter);
