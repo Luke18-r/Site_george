@@ -45,7 +45,7 @@ async function insertData() {
     const collection = db.collection('users'); // Replace 'users' with your collection name
 
     const dataToInsert = {
-      title: 'Mada Lucii',
+      title: 'Mada tihii',
       content: 'johndoe@example.com',
       luci: 'sarmale',
     };
